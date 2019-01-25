@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:textDirection="rtl"
+    android:layoutDirection="rtl"
+    >
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="120dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtNameFamily"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/imgProfile"
+                android:text="عباس قلی ازادی"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="#000000"
+                app:layout_constraintStart_toEndOf="@+id/imgProfile"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtNameFamily"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:text="تهران - صادقیه - پلاک ۱۹ - واحد ۱۰"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                app:layout_constraintStart_toEndOf="@+id/imgProfile"
+                app:layout_constraintTop_toBottomOf="@+id/txtNameFamily" />
+
+            <TextView
+                android:id="@+id/txtID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/colorPrimary"
+                android:text="1"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textStyle="bold"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtLockerCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:layout_marginStart="8dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="12345"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
+                app:layout_constraintStart_toEndOf="@+id/imgProfile"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/txtAddress"
+                />
+
+            <TextView
+                android:id="@+id/txtNationalCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:text="0097451237"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/txtLockerCode"
+                app:layout_constraintStart_toEndOf="@+id/imgProfile"
+
+                />
+
+            <TextView
+                android:id="@+id/txtTel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:text="09121234567"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/txtNationalCode"
+                app:layout_constraintStart_toEndOf="@+id/imgProfile"
+
+                />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
