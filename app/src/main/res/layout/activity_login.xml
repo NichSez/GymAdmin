@@ -11,16 +11,15 @@
         android:id="@+id/imageViewLogin"
         android:layout_width="108dp"
         android:layout_height="100dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTel"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTel"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNationalCode"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/editTextTel"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/gym_logo" />
 
     <EditText
-        android:id="@+id/editTextTel"
+        android:id="@+id/editTextNationalCode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -28,27 +27,11 @@
         android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:labelFor="@+id/textViewUsername"
-        app:layout_constraintBottom_toTopOf="@+id/editTextLockerCode"
-        app:layout_constraintEnd_toEndOf="@+id/editTextLockerCode"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextLockerCode"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewLogin" />
-
-
-    <EditText
-        android:id="@+id/editTextLockerCode"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:importantForAutofill="no"
-        android:inputType="textPersonName"
-        android:labelFor="@+id/textViewPass"
-        android:hint="@string/password"
         app:layout_constraintBottom_toTopOf="@+id/buttonLogin"
-        app:layout_constraintEnd_toEndOf="@+id/buttonLogin"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/buttonLogin"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTel" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewLogin" />
 
 
     <Button
@@ -61,6 +44,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLockerCode" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextNationalCode" />
 
 </android.support.constraint.ConstraintLayout>
