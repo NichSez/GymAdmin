@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/colorSecondary"
         android:ems="10"
-        android:hint="کد لاکر ورزشکار مورد نظر"
+        android:hint="کد ورزشکار مورد نظر"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/EtxtLockerCode"
         app:layout_constraintEnd_toEndOf="parent"
@@ -164,6 +164,7 @@
         android:layout_marginBottom="8dp"
         android:background="@color/colorPrimary"
         android:text="ویرایش"
+        android:enabled="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline2" />
@@ -177,6 +178,7 @@
         android:layout_marginBottom="8dp"
         android:background="@color/colorPrimary"
         android:text="حذف"
+        android:enabled="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="parent" />
