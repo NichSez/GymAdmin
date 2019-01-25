@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">GymAdmin</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">سامانه باشگاه بدنسازی</string>
+    <string name="nav_header_subtitle">-----</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login">Sign in</string>
+    <!-- Strings related to login -->
+    <string name="user_name">کد ملی</string>
+    <string name="password">admin</string>
+    <string name="login">ورود</string>
+    <!-- String Page name -->
+    <string name="login_page">صفحه ورود</string>
+    <string name="title_activity_body_state">BodyStateActivity</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+
+</resources>
