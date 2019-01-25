@@ -4,13 +4,189 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.nich_sez.gymadmin.EditOrDeleteAthlete"
     tools:showIn="@layout/activity_edit_or_delete_athlete">
 
-    <TextView
-        android:id="@+id/textView2"
+
+    <Button
+        android:id="@+id/BtnSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="It is edit or delete athlete" />
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="جستجو"
+        app:layout_constraintBaseline_toBaselineOf="@+id/EtxtSearch"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.33" />
+
+    <EditText
+        android:id="@+id/EtxtSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorSecondary"
+        android:ems="10"
+        android:hint="کد لاکر ورزشکار مورد نظر"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/EtxtLockerCode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/EtxtLockerCode"
+        android:layout_width="352dp"
+        android:layout_height="wrap_content"
+
+        android:backgroundTint="@color/colorSecondary"
+        android:ems="10"
+        android:hint="کد لاکر"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textColorHint="@color/colorSecondaryLight"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/EtxtName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EtxtSearch" />
+
+
+    <EditText
+        android:id="@+id/EtxtName"
+        android:layout_width="352dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/colorSecondary"
+        android:ems="10"
+        android:hint="اسم ورزشکار"
+        android:inputType="text|textPersonName"
+        android:textAlignment="center"
+        android:textColorHint="@color/colorSecondaryLight"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/EtxtFamily"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EtxtLockerCode" />
+
+    <EditText
+        android:id="@+id/EtxtFamily"
+        android:layout_width="352dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/colorSecondary"
+        android:ems="10"
+        android:hint="نام خانوادگی ورزشکار"
+        android:inputType="text|textPersonName"
+        android:textAlignment="center"
+        android:textColorHint="@color/colorSecondaryLight"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/EtxtAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EtxtName" />
+
+
+    <EditText
+        android:id="@+id/EtxtAddress"
+        android:layout_width="352dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/colorSecondary"
+        android:ems="10"
+        android:hint="آدرس"
+        android:inputType="textMultiLine|textLongMessage"
+        android:textAlignment="center"
+        android:textColorHint="@color/colorSecondaryLight"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/EtxtTel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EtxtFamily" />
+
+    <EditText
+        android:id="@+id/EtxtTel"
+        android:layout_width="352dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/colorSecondary"
+        android:ems="10"
+        android:hint="شماره تلفن همراه"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textColorHint="@color/colorSecondaryLight"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/EtxtNationalCode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EtxtAddress" />
+
+    <EditText
+        android:id="@+id/EtxtNationalCode"
+        android:layout_width="352dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/colorSecondary"
+        android:ems="10"
+        android:hint="کد ملی"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColorHint="@color/colorSecondaryLight"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EtxtTel" />
+
+
+    <Button
+        android:id="@+id/BtnEdit"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorPrimary"
+        android:text="ویرایش"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline2" />
+
+    <Button
+        android:id="@+id/BtnDelete"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorPrimary"
+        android:text="حذف"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+
+
 </android.support.constraint.ConstraintLayout>
