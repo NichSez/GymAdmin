@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DividerItemDecoration;
@@ -34,6 +35,7 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity {
 
     Button createAthlete, editOrDeleteAthlete;
+    SwipeRefreshLayout swipeRefreshLayout;
 
 
 
@@ -47,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
     public void onUserReqGetComplete(JSONObject response) {
 
         //TODO:Make an Order BY query
-
+        userList = new ArrayList<>();
         try {
             //For each history we will create a subscription object
             JSONArray subsJsonArray = response.getJSONArray("Users");
@@ -70,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
             usersListAdapter = new UserListAdapter(this, userList);
             usersRecyclerView.setAdapter(usersListAdapter);
             usersListAdapter.notifyDataSetChanged();
+            swipeRefreshLayout.setRefreshing(false);
         } catch (JSONException e){
             e.printStackTrace();
         }
@@ -124,12 +127,23 @@ public class MainActivity extends AppCompatActivity {
         usersRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         usersListAdapter = new UserListAdapter(this, userList);
 
-
+        swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipeRecycler);
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                System.out.println("OK");
+                refreshRecycle();
+            }
+        });
 
 
         //Finally let's go for the list
         refreshList(this);
 
+    }
+
+    private void refreshRecycle(){
+        refreshList(this);
     }
 
     public void refreshList(Context context){
